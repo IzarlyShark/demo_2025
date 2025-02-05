@@ -35,7 +35,7 @@ javafx {
 }
 
 dependencies {
-  compileOnly 'org.projectlombok:lombok:1.18.24' // Убедитесь, что версия актуальна
+  compileOnly 'org.projectlombok:lombok:1.18.24' 
   annotationProcessor 'org.projectlombok:lombok:1.18.24' // Для аннотаций
   implementation 'org.postgresql:postgresql:42.6.0'
 
