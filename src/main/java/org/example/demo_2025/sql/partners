@@ -1,0 +1,14 @@
+CREATE TABLE partners (
+    id SERIAL PRIMARY KEY,
+    type VARCHAR(50) NOT NULL,
+    company_name VARCHAR(100) NOT NULL,
+    legal_address VARCHAR(255) NOT NULL,
+    inn VARCHAR(12) NOT NULL UNIQUE,
+    director_name VARCHAR(100) NOT NULL,
+    contact_phone VARCHAR(15),
+    contact_email VARCHAR(100),
+    logo BYTEA,
+    rating VARCHAR DEFAULT '0',  -- Изменено на строковый тип с значением по умолчанию '0'
+    sales_places TEXT,
+    discount_history TEXT
+);

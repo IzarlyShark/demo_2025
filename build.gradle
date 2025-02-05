@@ -17,8 +17,8 @@ ext {
   junitVersion = '5.10.0'
 }
 
-sourceCompatibility = '8'
-targetCompatibility = '8'
+sourceCompatibility = '9'
+targetCompatibility = '9'
 
 tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
@@ -35,6 +35,10 @@ javafx {
 }
 
 dependencies {
+  compileOnly 'org.projectlombok:lombok:1.18.24' // Убедитесь, что версия актуальна
+  annotationProcessor 'org.projectlombok:lombok:1.18.24' // Для аннотаций
+  implementation 'org.postgresql:postgresql:42.6.0'
+
   implementation('org.controlsfx:controlsfx:11.1.2')
   implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
     exclude(group: 'org.openjfx')
